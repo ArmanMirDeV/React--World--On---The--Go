@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Country.css'
 
 const Country = ({ country }) => {
 
-    const handleVisited = () =>{
-        console.log("Button Clicked")
+    const [Visited, setVisited] = useState(false)
+
+    const handleVisited = () => {
+        //Basic System 
+        /*  if(Visited){
+           setVisited(false)
+         }
+         else{
+           setVisited(true)
+         } */
+
+           //Second System
+        // setVisited(Visited ? false : true)
+
+        //Third System
+
+        setVisited(!Visited)
     }
 
     console.log(country)
     return (
-        <div className='country' >
+        <div className={`country ${Visited && 'country-visited'}`} >
             <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
 
             <h3>  Name: {country.name.common}</h3>
@@ -27,7 +42,9 @@ const Country = ({ country }) => {
 
             <p>Languages: {country.continents.continents}</p>
 
-            <button onClick={handleVisited} > Not Visited </button>
+            <button onClick={handleVisited} >
+                {Visited ? "Visited" : "Not Visited"}
+            </button>
 
         </div>
     );
