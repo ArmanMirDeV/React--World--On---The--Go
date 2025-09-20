@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries }) => {
 
     const [Visited, setVisited] = useState(false)
 
@@ -14,12 +14,13 @@ const Country = ({ country }) => {
            setVisited(true)
          } */
 
-           //Second System
+        //Second System
         // setVisited(Visited ? false : true)
 
         //Third System
 
-        setVisited(!Visited)
+        setVisited(!Visited);
+        handleVisitedCountries(country);
     }
 
     console.log(country)
@@ -58,3 +59,44 @@ export default Country;
 
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+My love 
+Don't let us fade away
+Don't wake my dreams i pray
+Just keep me lost in You
+Love
+Loneliness drowns me deep
+My heart to torn to keep
+Yet i crave your touch so true
+
+*/
