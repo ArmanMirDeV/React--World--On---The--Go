@@ -23,7 +23,7 @@ const Country = ({ country, handleVisitedCountries }) => {
         handleVisitedCountries(country);
     }
 
-    console.log(country)
+
     return (
         <div className={`country ${Visited && 'country-visited'}`} >
             <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
